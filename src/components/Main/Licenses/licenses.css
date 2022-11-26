@@ -1,0 +1,35 @@
+.licenses__header {
+  margin: 20px auto;
+  text-align: center;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+.licenses__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.licenses__point {
+  width: 20vw;
+  height: 26vw;
+  /* object-fit: contain; */
+  /* margin: 5px; */
+}
+.licenses__buttonPopup {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+
+}
+.licenses__photo {
+  width: 20vw;
+  height: 26vw;
+  object-fit: contain;
+}

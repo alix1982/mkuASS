@@ -1,0 +1,35 @@
+.statistics__heading {
+  margin: 0;
+  margin-top: 10px;
+  padding: 10px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  /* font-size: 16px;
+  line-height: 18px; */
+}
+.statistics__headingTab {
+  display: flex;
+  margin: 0;
+  padding: 12px;
+  justify-content: space-between;
+  width: calc(100% - 30px);
+  border-bottom: 1px solid #ebebeb;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 17px;
+}
+.statistics__byYear {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.statistics__sell {
+  width: 60px;
+  text-align: end;
+  margin: 0;
+}

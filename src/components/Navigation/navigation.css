@@ -1,0 +1,93 @@
+.navigation {
+  /* display: block; */
+}
+.navigation__list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.navigation__point {
+  white-space: nowrap;
+  border: 1px solid #ebebeb;
+  border-bottom: none;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  /* font-weight: 400; */
+  font-size: 16px;
+  line-height: 18px;
+
+
+}
+.navigation__point:hover {
+  background-color: #ebebeb;
+  border-top: 1px solid #024896;
+}
+
+.navigation__pointButton {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  color: #000000;
+  text-decoration: none;
+}
+.navigation__pointButton_active {
+  border-top: 1px solid #024896;
+}
+
+.navigation__sublist {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+  padding: 0;
+}
+.navigation__arrow {
+  /* padding-bottom: 30px; */
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  opacity: 0.4;
+}
+.navigation__listItem:hover .navigation__sublist {
+  display: flex;
+  position: absolute;
+  padding: 15px;
+  background-color: #ffffff;
+  z-index: 2;
+  /* top: -20px;
+  left: -20px; */
+}
+/* .navigation__listItem_active {
+
+} */
+.navigation__subpoint {
+  padding: 10px;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+.navigation__subpointButton {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  text-decoration: none;
+}
+.navigation__subpointButton_active {
+  border-bottom: 1px solid #000000;
+}
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 400px) {
+
+}

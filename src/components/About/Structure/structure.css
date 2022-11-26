@@ -1,0 +1,6 @@
+.structure__img {
+  width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+  overflow: hidden;
+}

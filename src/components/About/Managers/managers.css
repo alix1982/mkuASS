@@ -1,0 +1,37 @@
+.managers__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.manager {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25vw;
+  margin: 20px 10px;
+}
+.manager__photo {
+  width: 25vw;
+  object-fit: contain;
+}
+.manager__name {
+  text-align: center;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.manager__post {
+  margin: 0;
+  text-align: center;
+  color: #024896;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}

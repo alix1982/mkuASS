@@ -1,0 +1,114 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%;
+  min-height: 74px;
+  align-items: center;
+  justify-content: space-between; */
+}
+.header__header {
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #ebebeb; */
+  margin: 14px 0 14px 0;
+}
+.header__address {
+  margin: 0;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  /* font-weight: 400; */
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+.header__form {
+  text-decoration: none;
+  color: #000000;
+}
+.header__form:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.header__line {
+  /* width: 100vw; */
+  border-bottom: 1px solid #ebebeb;
+}
+.header__logo:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.header__info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* justify-content: center; */
+  margin: 20px auto;
+}
+/* .header__first {
+  display: flex;
+} */
+.header__linkLogo {
+  display: flex;
+  align-self: center;
+  margin: 0;
+  text-decoration: none;
+}
+.header__imgLogo {
+  width: 80px;
+  height: 80px;
+  /* vertical-align: middle; */
+}
+.header__institution {
+  align-self: center;
+  margin: 0;
+  margin-left: 20px;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  /* font-weight: 400; */
+  font-size: 26px;
+  line-height: 30px;
+  color: #024896;
+}
+.header__numberTel {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  /* vertical-align: middle; */
+  margin: 0;
+  margin-left: 20px;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #024896;
+}
+.header__iconTel {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1110px) {
+  .header__institution {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .header__numberTel {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header__institution {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .header__numberTel {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

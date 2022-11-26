@@ -1,0 +1,16 @@
+.headerMain__header {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 20px);
+  min-height: 100px;
+  margin: 0;
+  vertical-align: middle;
+  padding-left: 20px;
+  background-color: #024896;
+  color: #ffffff;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+}

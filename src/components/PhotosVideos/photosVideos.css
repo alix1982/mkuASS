@@ -1,0 +1,38 @@
+.photosVideos__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.photosVideos__heading {
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  /* font-weight: 400; */
+  font-size: 20px;
+  line-height: 24px;
+}
+.photosVideos__point {
+  width: calc(50vw - 80px);
+  /* height: calc(50vw - 150px); */
+  margin: 0;
+}
+.photosVideos__pointHeading {
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  /* font-weight: 400; */
+  font-size: 18px;
+  line-height: 20px;
+}
+.photosVideos__pointVideo {
+    width: calc(50vw - 90px);
+    height: 25vw;
+}
+.photosVideos__pointPhoto {
+    width: calc(25vw - 40px);
+}
+.photosVideos__pointImg {
+  width: calc(25vw - 40px);
+  height: calc(25vw - 40px);
+  object-fit: cover;
+}

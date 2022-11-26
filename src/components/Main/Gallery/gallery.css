@@ -1,0 +1,52 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    background-color: #024896;
+  }
+  .gallery__foto {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    width: 100%;
+    height: calc(0.5*100vw - 40px);
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .gallery__buttonLeft {
+    padding: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: transparent;
+    border: none;
+    opacity: 0.8;
+  }
+  .gallery__buttonLeft:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  .gallery__buttonLeftImg {
+  }
+  .gallery__buttonRight {
+    padding: 0;
+    grid-column: 5/6;
+    grid-row: 1/2;
+    background-color: transparent;
+    border: none;
+    opacity: 0.8;
+  }
+  .gallery__buttonRight:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  .gallery__text {
+    margin: 0;
+    grid-column: 2/5;
+    grid-row: 1/2;
+    align-self: center;
+    font-family: Inter, Georgia, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ebebeb;
+  }
