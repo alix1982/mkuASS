@@ -3,10 +3,12 @@ import gallery from '../../utils/gallery';
 
 function PhotosVideos (props) {
   const galleryArrPhotoVideos = gallery();
+  console.log("ok")
   return (
     <section className="photosVideos">
       <h3 className="photosVideos__heading">Видео</h3>
       <p>Боремся с Ютубом, скоро с ним договримся и видео станет доступно</p>
+
       {/* <ul className="photosVideos__list">
         <li className="photosVideos__point">
           <h4 className="photosVideos__pointHeading">20 лет Службе спасения Северодвинска</h4>
