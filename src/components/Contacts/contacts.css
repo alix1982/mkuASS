@@ -1,0 +1,39 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+.contacts__map {
+  width: 48%;
+}
+.contacts__mapImg {
+  width: 100%;
+  object-fit: contain;
+}
+.contacts__list {
+  width: 48%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.contacts__point {
+  margin: 0;
+}
+.contacts__pointIcon {
+  width: 25px;
+  margin-right: 5px;
+  /* height: 20px; */
+}
+.contacts__pointHeading {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+.contacts__pointText {
+  margin-left: 30px;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  /* font-weight: 400; */
+  font-size: 15px;
+  line-height: 18px;
+}

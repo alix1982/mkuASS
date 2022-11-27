@@ -82,31 +82,6 @@ function Navigation (props) {
           <NavLink to="/contacts" className={activeClassPoint}>Контакты</NavLink>
         </li>
       </ul>
-      {/* <div className={`navigation ${(props.isNavigationPopupOpen && 'navigation__active')}`} onClick = {props.onCloseOverlay}>
-        <ul className="navigation__list">
-          <li className="navigation__point">
-            <NavLink to="/" className={activeClassMain} onClick={props.onClose}>Главная</NavLink>
-          </li>
-          <li className="navigation__point">
-            <NavLink to="/movies" className={activeClassMovies} onClick={transitionMovies}>
-              Фильмы
-            </NavLink>
-          </li>
-          <li className="navigation__point">
-            <NavLink to="/saved-movie" className={activeClassMovies} onClick={transitionSavedMovies}>
-              Сохранённые фильмы
-            </NavLink>
-          </li>
-          <li className="navigation__point">
-            <Link to="/profile" className="navigation__akkaunt" onClick={props.onClose}>
-              <img src= {butAkk} className="navigation__buttonAkkaunt" alt="Аккаунт"/>
-              <p className={`navigation__textButtonAkkaunt navigation${props.auth}__textButtonAkkaunt`}>Аккаунт</p>
-            </Link>
-          </li>
-        </ul>
-        <button className="navigation__buttonClose" onClick={props.onClose}></button>
-      </div>
-      <button className={`navigation__button navigation${props.auth}__button`} onClick={props.onPopupNavigation}></button> */}
     </section>
   )
 }

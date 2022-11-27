@@ -21,6 +21,7 @@ import WorksAndServices from '../WorksAndServices/WorksAndServices.js';
 import News from '../News/News.js';
 import UsefulInformation from '../UsefulInformation/UsefulInformation.js';
 import PhotosVideos from '../PhotosVideos/PhotosVideos.js';
+import Contacts from '../Contacts/Contacts.js';
 
 import Footer from '../Footer/Footer.js';
 import NoRoute from '../NoRoute/NoRoute';
@@ -30,185 +31,55 @@ import NoPage from '../NoPage/NoPage';
 import {CurrentUserContext, currentUserContext} from '../../contexts/CurrentUserContext.js';
 
 function App() {
-  const [isNavigationPopupOpen, setIsNavigationPopup] = useState(false); // открытие попапа навигации
-  const [loggedIn, setLoggedIn] = useState(false); // защита роутов
-  const [allMovies, setAllMovies] = useState([]);  // карточки c сервера практикума
+  // const [isNavigationPopupOpen, setIsNavigationPopup] = useState(false); // открытие попапа навигации
+  // const [loggedIn, setLoggedIn] = useState(false); // защита роутов
+  // const [allMovies, setAllMovies] = useState([]);  // карточки c сервера практикума
   const [currentUser, setCurrentUser] = useState({name: 'Александр', email: 'pochta@yandex.ru',}); //первоначальные данные пользователя
-  const [currentCard, setCurrentCard] = useState([]);  // карточки с сервера практикума отфильтрованные пользователем
+  // const [currentCard, setCurrentCard] = useState([]);  // карточки с сервера практикума отфильтрованные пользователем
   
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
 
-  // закрытие попапов
-  function onCloseOverlay (evt) {
-    (evt.target === evt.currentTarget) && closeAllPopups()
-  }
-  function closeAllPopups () {
-    setIsNavigationPopup(false);
-  }
-
-  //открытие попапа навигации при разрешении меньше 800px
-  function handleOnPopupNavigation () {
-    setIsNavigationPopup(true);
-  }
- 
-  // переход на роуты регистрации и авторизации
-  function onClickPopupWithForm (name) {
-    // if (name === "Profile") {quitUser()};
-    if (name === "Register") {navigate("/signin")};
-    if (name === "Login") {navigate("/signup")};
-  }
-
-  // переход на страницы пользователем
-  let urlRoute=window.location.pathname
-  function redirect () {
-    if (urlRoute === "/") {
-      navigate("/");
-      return;
-    }
-    if (urlRoute === "/movies" || urlRoute === "/signin" || urlRoute === "/signup") {
-      navigate("/movies");
-      return;
-    }
-    if (urlRoute === "/saved-movie") {
-      navigate("/saved-movie");
-      return;
-    }
-    if (urlRoute === '/profile') { 
-      navigate("/profile");
-      return;
-    }
-    navigate("/no-route");
-  }
-
-  // // запись данных из localStorage
-  // function requestLocalStorage () {
-  //   let inputValue = JSON.parse(localStorage.getItem('arrMovies'));
-  //   if (inputValue !== null) {
-  //     setCurrentCard(inputValue.arrMovies);
-  //     setvalueInputMovie(inputValue.valueInputMovie);
-  //     setInputChecked(inputValue.checked);
-  //   }
-  //   setIsRequestLocalStorage(true);
+  // // закрытие попапов
+  // function onCloseOverlay (evt) {
+  //   (evt.target === evt.currentTarget) && closeAllPopups()
   // }
-  // useEffect(() => {requestLocalStorage ()},[]);
-  // useEffect(() => {requestLocalStorage ()},[isNavigateMovies]);
+  // function closeAllPopups () {
+  //   setIsNavigationPopup(false);
+  // }
 
-  // function filterMovies () {
-  //   let arrMovies = [];
-  //   if (!isFirstSubmitMovies) {
+  // //открытие попапа навигации при разрешении меньше 800px
+  // function handleOnPopupNavigation () {
+  //   setIsNavigationPopup(true);
+  // }
+ 
+  // // переход на роуты регистрации и авторизации
+  // function onClickPopupWithForm (name) {
+  //   // if (name === "Profile") {quitUser()};
+  //   if (name === "Register") {navigate("/signin")};
+  //   if (name === "Login") {navigate("/signup")};
+  // }
+
+  // // переход на страницы пользователем
+  // let urlRoute=window.location.pathname
+  // function redirect () {
+  //   if (urlRoute === "/") {
+  //     navigate("/");
   //     return;
   //   }
-  //   allMovies.map((c) => {
-  //     if (c.nameRU.toLowerCase().includes(valueInputMovie.toLowerCase())) {
-  //       if (inputChecked) {
-  //         if (c.duration < constants.DURATION_SHORT_MOVIE) {arrMovies.push(c)};
-  //       } else {arrMovies.push(c);}
-  //     }
-  //   })
-  //   setCurrentCard(arrMovies)
-  //   if (valueInputMovie) {
-  //     localStorage.setItem('arrMovies', JSON.stringify({
-  //       arrMovies: arrMovies,
-  //       valueInputMovie: valueInputMovie,
-  //       checked: inputChecked
-  //     }))
+  //   if (urlRoute === "/movies" || urlRoute === "/signin" || urlRoute === "/signup") {
+  //     navigate("/movies");
+  //     return;
   //   }
-  //   if (arrMovies.length === 0 && isNavigateMovies === false){
-  //     if (allMovies.length === 0) {setIsSearchMovie('')}
-  //     else {setIsSearchMovie('Ничего не найдено')}
-  //   } else { setIsSearchMovie('') }
-  // }
-  // useEffect(()=>{filterMovies()},[allMovies])
-
-  // // отрисовка отфильтрованных карточек во вкладка Фильмы
-  // function renderingCard () {
-  //   setQuantityCards (
-  //     constants.NUMBER_CARD.big, constants.NUMBER_CARD.big, constants.NUMBER_CARD.average, constants.NUMBER_CARD.small
-  //   );
-  //   setIsButtonMore(false);
-  //   if (valueInputMovie){
-  //     if (!isFirstSubmitMovies) {
-  //       filterMovies();
-  //       return;
-  //     }
-  //     if (allMovies.length === 0) {
-  //       setIsRequestPassed(true);
-  //       moviesApi.getCards ()
-  //         .then ((res, next) => {
-  //           setAllMovies(res);
-  //         })
-  //         .then (()=>{
-  //           filterMovies ()
-  //         })
-  //         .finally(()=>{setIsRequestPassed(false)})
-  //         .catch((err) => {
-  //           console.log(`Ошибка: ${err}`)
-  //           if (err === 401) {
-  //             setLoggedIn(false);
-  //             quitUser();
-  //           }
-  //           setIsRequestPassed(false);
-  //           setIsSearchMovie('Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз')
-  //         });
-  //     } else {filterMovies()}
+  //   if (urlRoute === "/saved-movie") {
+  //     navigate("/saved-movie");
+  //     return;
   //   }
-  // }
-
-  // // отрисовка лайков на отфильтрованных карточках (вкладка фильмы)
-  // function requestCurrentCardMain () {
-  //   let arrMain=[]
-  //   if (currentCard.length !== 0) {
-  //     mainApi.getCards ()
-  //       .then ((res)=>{
-  //         setIsRequestPassed(true)
-  //         res.forEach(c => {
-  //           if (c.owner === currentUser._id) {
-  //             arrMain.push(c)
-  //           }
-  //         });
-  //         setCurrentCardMain(arrMain)
-  //       })
-  //       .finally(()=>{setIsRequestPassed(false)})
-  //       .catch((err) => {
-  //         console.log(`Ошибка: ${err}`)
-  //         if (err === 401) {
-  //           setLoggedIn(false);
-  //           quitUser();
-  //         }
-  //         setIsRequestPassed(false);
-  //         setIsSearchMovie('Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз')
-  //       });
+  //   if (urlRoute === '/profile') { 
+  //     navigate("/profile");
+  //     return;
   //   }
+  //   navigate("/no-route");
   // }
-  // useEffect(() => {requestCurrentCardMain()},[currentUser, currentCard]);
-
-  // // отрисовка отфильтрованных, сохраненных пользователем карточек
-  // function renderingSavedCard () {
-  //   setQuantityCards (
-  //     constants.NUMBER_CARD.big, constants.NUMBER_CARD.big, constants.NUMBER_CARD.average, constants.NUMBER_CARD.small
-  //   )
-  //   let arrSavedMovies = [];
-  //   setIsButtonMore(false);
-  //   setCurrentCardSaved(currentCardMain);
-  //   currentCardMain.map((c) => {
-  //     if (valueInputMovieSaved){
-  //       if (c.nameRU.toLowerCase().includes(valueInputMovieSaved.toLowerCase())) {
-  //         if (inputCheckedSaved) {
-  //           if (c.duration < constants.DURATION_SHORT_MOVIE) {arrSavedMovies.push(c)}
-  //         } else {arrSavedMovies.push(c);}
-  //       }
-  //     } else {
-  //       if (inputCheckedSaved) {
-  //         if (c.duration < constants.DURATION_SHORT_MOVIE) {arrSavedMovies.push(c)}
-  //       } else { arrSavedMovies = currentCardMain }
-  //     }
-  //     setCurrentCardSaved(arrSavedMovies);
-  //   })
-  //   if (arrSavedMovies.length === 0 && isNavigateMovies === true){
-  //     setIsSearchMovieSaved('Ничего не найдено')
-  //   } else { setIsSearchMovieSaved('') }
-  // }
-  // useEffect(()=>{renderingSavedCard()},[currentUser, currentCardMain])
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -358,7 +229,7 @@ function App() {
             <Header/>
             <Navigation/>
             <HeaderMain headingText={"Контакты"}/>
-            <NoPage/>
+            <Contacts/>
             <Footer/>
           </>
         }/>

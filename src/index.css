@@ -29,6 +29,7 @@ body {
 @import url(components/News/news.css);
 @import url(components/UsefulInformation/usefulInformation.css);
 @import url(components/PhotosVideos/photosVideos.css);
+@import url(components/Contacts/contacts.css);
 
 @import url(components/Footer/footer.css);
 

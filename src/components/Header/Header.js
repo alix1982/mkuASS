@@ -9,7 +9,7 @@ function Header (props) {
     <header className="header">
       <div className="header__header">
         <p className="header__address">164500, Архангельская область, г. Северодвинск, улица Лесная, 25</p>
-        <Link to="/" className="header__form">Образцы заявок на курсы</Link>
+        <Link to="/no-route" className="header__form">Образцы заявок на курсы</Link>
       </div>
       <div className="header__line"></div>
       <div className="header__info">
