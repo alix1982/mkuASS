@@ -1,0 +1,58 @@
+.bodyVisuallyImpaired {
+  background-color: #ffffff;
+  filter: grayscale(1) contrast(1.7);
+}
+/* .pVisuallyImpaired {
+  color: #000000;
+} */
+/* изменение фона header__main */
+/* .headerMain__headerVisuallyImpaired {
+  background-color: #000000;
+} */
+/* изменение фона сайта */
+/* .body {
+  background-color: #ffffff;
+  filter: grayscale(1);
+}
+.footer {
+  background: #ffffff;
+} */
+
+
+
+
+
+/* изменения цвета текста сайта */
+/* цвет текста противоположный фону на стандартном фоне*/
+/* p, li, ul, h1, h2, h3, h4, h5, ol, a {
+  color: #000000;
+}
+.documents__link, .documents__text, .manager__post, .footer__partners, .footer__copyright, .footer__link, .header__address,
+.header__institution, .header__numberTel, .education__pointTextLink, .licenses__header, .navigation__pointButton,
+.navigation__subpointButton, .photosVideos__pointLink, .noRoute__heading, .noRoute__text, .noRoute__link
+{
+  color: #000000;
+} */
+/* цвет текста как фон на контрастном фоне */
+/* .headerMain__header, .gallery__text {
+  color: #ffffff;
+} */
+
+/* .documents__text {color: #024896;}
+.manager__post {color: #024896;}
+.footer__partners {color: #A0A0A0;}
+.footer__copyright {color: #000000;}
+.footer__link {color: #000000;}
+.header__address {color: #000000;}
+.header__institution {color: #024896;}
+.header__numberTel {color: #024896;}
+.headerMain__header {color: #ffffff;}
+.education__pointTextLink {color: #024896;}
+.gallery__text {color: #ebebeb;}
+.licenses__header {color: #000000;}
+.navigation__pointButton {color: #000000;}
+.navigation__subpointButton {color: #000000;}
+.photosVideos__pointLink {color: #000000;}
+.noRoute__heading {color: #000000;}
+.noRoute__text {color: #000000;}
+.noRoute__link {color: #2BE080;} */

@@ -9,8 +9,10 @@
 .header__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-height: 18px;
   /* border-bottom: 1px solid #ebebeb; */
-  margin: 14px 0 14px 0;
+  margin: 14px 0;
 }
 .header__address {
   margin: 0;
@@ -21,13 +23,37 @@
   line-height: 16px;
   color: #000000;
 }
-.header__form {
-  text-decoration: none;
+.header__samples {
+  padding-left: 20px;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  /* font-weight: 400; */
+  font-size: 14px;
+  line-height: 16px;
   color: #000000;
+  text-decoration: none;
 }
-.header__form:hover {
+.header__visuallyImpaired {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  /* width: min-content; */
+  background-color: #ffffff;
+  border: none;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.header__visuallyImpaired:hover {
   cursor: pointer;
   opacity: 0.6;
+  /* font-weight: 700; */
+}
+.header__visuallyImpairedImg {
+  width: 20px;
+  margin-right: 10px;
 }
 .header__line {
   /* width: 100vw; */
@@ -54,6 +80,11 @@
   margin: 0;
   text-decoration: none;
 }
+.header__linkLogo:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .header__imgLogo {
   width: 80px;
   height: 80px;
@@ -103,6 +134,30 @@
 }
 
 @media screen and (max-width: 800px) {
+  .header__header {
+    /* justify-content: space-between; */
+    margin: 10px 0;
+  }
+  .header__address {
+    display: none;
+  }
+  .header__samples {
+    padding: 0;
+    width: 50%;
+  }
+  .header__visuallyImpaired {
+    justify-content: end;
+    white-space: normal;
+    width: 50%;
+  }
+  .header__info {
+    flex-direction: column;
+  }
+  .header__numberTel {
+    margin: 0;
+    margin-top: 20px;
+    /* margin-right: 40vw; */
+  }
   .header__institution {
     font-size: 16px;
     line-height: 18px;
@@ -110,5 +165,25 @@
   .header__numberTel {
     font-size: 12px;
     line-height: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header__header {
+    margin: 7px 0;
+  }
+  .header__visuallyImpaired {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .header__linkLogo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__institution {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .header__numberTel {
+    margin: 0;
   }
 }

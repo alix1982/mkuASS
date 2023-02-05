@@ -1,52 +1,169 @@
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 0px;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes slideinOpacity {
+  0% {
+    opacity: 1;
+  }
+  /* 50% {
+    opacity: 0;
+  } */
+  100% {
+    opacity: 0;
+  }
+}
+.gallery__animation {
+  animation-duration: 5s;
+  animation-name: slideinOpacity;
+}
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    background-color: #024896;
+  width: 100%;
+  height: calc(40vw - 40px);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: calc(40vw - 40px);
+  background-color: #024896;
+}
+.gallery__foto {
+  grid-column: 2/7;
+  grid-row: 1/2;
+  width: 100%;
+  height: calc(40vw - 40px);
+  object-fit: cover;
+  overflow: hidden;
+}
+.gallery__buttonLeft {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: calc(40vw - 40px);
+  padding: 0;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border: none;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.gallery__buttonLeft::after {
+  content: '';
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+  /* background-image: linear-gradient(to left, red, green); */
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+.gallery__buttonLeftImg {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: auto 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+  height: calc(40vw - 60px);
+  /* opacity: 0.8; */
+}
+.gallery__buttonLeftImg:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.gallery__buttonRight {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: calc(40vw - 40px);
+  padding: 0;
+  grid-column: 7/8;
+  grid-row: 1/2;
+  border: none;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.gallery__buttonRight::after {
+  content: '';
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+  /* background-image: linear-gradient(to left, red, green); */
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+.gallery__buttonRightImg {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: auto 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: left;
+  height: calc(40vw - 60px);
+  /* opacity: 0.8; */
+}
+.gallery__buttonRight:hover {
+  /* animation-duration: 10s;
+  animation-name: slideinOpacity; */
+  cursor: pointer;
+  /* opacity: 0.5; */
+}
+.gallery__text {
+  margin: 0;
+  padding-left: 20px;
+  grid-column: 2/7;
+  grid-row: 1/2;
+  align-self: center;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ebebeb;
+}
+@media screen and (max-width: 600px) {
+  .gallery__text {
+    display: none;
+  }
+}
+@media screen and (max-width: 475px) {
+  .gallery {
+    height: 150px;
+    grid-template-rows: 150px;
   }
   .gallery__foto {
-    grid-column: 1/6;
-    grid-row: 1/2;
-    width: 100%;
-    height: calc(0.5*100vw - 40px);
-    object-fit: cover;
-    overflow: hidden;
+    height: 150px;
   }
   .gallery__buttonLeft {
-    padding: 0;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    background-color: transparent;
-    border: none;
-    opacity: 0.8;
-  }
-  .gallery__buttonLeft:hover {
-    cursor: pointer;
-    opacity: 0.5;
+    grid-template-rows: 150px;
   }
   .gallery__buttonLeftImg {
+    height: 130px;
   }
   .gallery__buttonRight {
-    padding: 0;
-    grid-column: 5/6;
-    grid-row: 1/2;
-    background-color: transparent;
-    border: none;
-    opacity: 0.8;
+    grid-template-rows: 150px;
   }
-  .gallery__buttonRight:hover {
-    cursor: pointer;
-    opacity: 0.5;
+  .gallery__buttonRightImg {
+    height: 130px;
   }
-  .gallery__text {
-    margin: 0;
-    grid-column: 2/5;
-    grid-row: 1/2;
-    align-self: center;
-    font-family: Inter, Georgia, sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    color: #ebebeb;
+}
+@media screen and (min-width: 1500px) {
+  .gallery {
+    height: 560px;
+    grid-template-rows: 560px;
   }
+  .gallery__foto {
+    height: 560px;
+  }
+  .gallery__buttonLeft {
+    grid-template-rows: 560px;
+  }
+  .gallery__buttonLeftImg {
+    height: 540px;
+  }
+  .gallery__buttonRight {
+    grid-template-rows: 560px;
+  }
+  .gallery__buttonRightImg {
+    height: 540px;
+  }
+}

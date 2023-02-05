@@ -1,5 +1,6 @@
 .documents__list {
   list-style-type: none;
+  padding-left: 20px;
 }
 .documents__point {
   /* display: flex;
@@ -25,4 +26,14 @@
   /* font-weight: 400; */
   font-size: 16px;
   line-height: 18px;
+  color: #024896;
+}
+@media screen and (max-width: 600px) {
+  .documents__list {
+    padding-left: 0;
+  }
+  .documents__link {
+    padding: 10px 0;
+
+  }
 }

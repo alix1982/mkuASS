@@ -7,7 +7,7 @@ function Main (props) {
   return (
     <main className="main">
       <Gallery/>
-      <Licenses/>
+      <Licenses setSelectedCard={props.setSelectedCard} openImg={props.openImg}/>
     </main>
   )
 }

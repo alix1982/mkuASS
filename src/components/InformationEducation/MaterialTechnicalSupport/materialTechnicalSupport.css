@@ -1,0 +1,62 @@
+.usefulInformation__heading {
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+}
+.usefulInformation__list {
+  list-style-type: none;
+  padding: 0;
+}
+.usefulInformation__pointHeading {
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.usefulInformation__pointText {
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.usefulInformation__subList {
+  list-style-type: none;
+  padding: 0;
+}
+.usefulInformation__subpointHeading {
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: underline;
+}
+.usefulInformation__listImg {
+  display: flex;
+  /* width: 21vw; */
+  height: 21vw;
+  padding: 0;
+}
+.usefulInformation__subpointImg {
+  width: 20vw;
+  /* height: 20vw; */
+  object-fit: cover;
+  padding: 5px;
+}
+.usefulInformation__subpointList {
+  list-style-type: circle;
+  padding: 0;
+  padding-left: 20px;
+}
+.usefulInformation__subpointPoint {
+  padding: 5px 0;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}

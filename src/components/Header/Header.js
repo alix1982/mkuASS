@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo_mku_ass from '../../images/logo_mku_ass.png';
 import icon_tel from '../../images/icon_tel.png';
+import icon_visuallyImpaired from '../../images/icon_visuallyImpaired.png';
+
 import Navigation from '../Navigation/Navigation.js';
 
 function Header (props) {
@@ -9,7 +11,12 @@ function Header (props) {
     <header className="header">
       <div className="header__header">
         <p className="header__address">164500, Архангельская область, г. Северодвинск, улица Лесная, 25</p>
-        <Link to="/no-route" className="header__form">Образцы заявок на курсы</Link>
+        <Link to="/sampleApplications" className="header__samples">Образцы заявок</Link>
+        <button  className="header__visuallyImpaired" onClick = {props.openVisuallyImpairedPopup}>
+          <img  className="header__visuallyImpairedImg" src={icon_visuallyImpaired}/>
+          Версия сайта для слабовидящих
+        </button>
+        {/* <Link to="/no-route" className="header__form">Образцы заявок на курсы</Link> */}
       </div>
       <div className="header__line"></div>
       <div className="header__info">
@@ -22,11 +29,11 @@ function Header (props) {
           +7 (8184) 50-00-01
         </p>
       </div>
-      
+
       {/* <div className={`header__nav header__nav${props.offNavigation}`}>
-        <Navigation 
-          isNavigationPopupOpen = {props.isNavigationPopupOpen} 
-          onClose = {props.onClose} onCloseOverlay = {props.onCloseOverlay} 
+        <Navigation
+          isNavigationPopupOpen = {props.isNavigationPopupOpen}
+          onClose = {props.onClose} onCloseOverlay = {props.onCloseOverlay}
           onPopupNavigation = {props.onPopupNavigation}
            setIsNavigateMovies={props.setIsNavigateMovies}
           auth = {props.auth}

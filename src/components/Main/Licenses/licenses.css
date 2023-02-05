@@ -33,3 +33,14 @@
   height: 26vw;
   object-fit: contain;
 }
+
+@media screen and (min-width: 1500px) {
+  .licenses__point {
+    width: 300px;
+    height: 390px;
+  }
+  .licenses__photo {
+    width: 300px;
+    height: 390px;
+  }
+}

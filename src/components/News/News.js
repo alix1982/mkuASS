@@ -38,7 +38,6 @@ function News (props) {
 
   return (
     <section className="news">
-      {/* <HeaderMain headingText="Новости"/> */}
       <ul className='news__list'>
         {newsList.map( item => { return (card(item, item.newsId)) })}
       </ul>

@@ -1,0 +1,29 @@
+.basicInformation__text {
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  /* font-weight: 400; */
+  font-size: 16px;
+  line-height: 18px;
+}
+.basicInformation__textSpan {  
+  /* font-family: Inter, Georgia, sans-serif;
+  font-style: normal; */
+  font-weight: 700;
+  /* font-size: 16px;
+  line-height: 18px; */
+}
+.basicInformation__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.basicInformation__point {
+  width: 22%;
+  padding: 10px;
+}
+.basicInformation__pointImg {
+  width: 100%;
+  object-fit: contain;
+}

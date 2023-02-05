@@ -1,28 +1,17 @@
-.usefulInformation__list {
-  list-style-type: none;
-}
-.usefulInformation__point {
-  /* display: flex;
-  align-items: center;
-  padding: 10px; */
-}
-.usefulInformation__link {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  text-decoration: none;
-  color: #000000;
-}
-.usefulInformation__icon {
-  width: 30px;
-  height: 30px;
-}
-.usefulInformation__text {
-  margin: 0;
-  margin-left: 20px;
+/* .usefulInformation__heading {
   font-family: Inter, Georgia, sans-serif;
   font-style: normal;
-  /* font-weight: 400; */
+  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+} */
+.usefulInformation__list {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 20px;
+}
+@media screen and (max-width: 600px) {
+  .usefulInformation__list {
+    padding-left: 0;
+  }
 }
