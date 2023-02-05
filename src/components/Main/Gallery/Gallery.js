@@ -22,7 +22,7 @@ function Gallery (props) {
   const [counterGallery, setCounterGallery] = useState(1);
   const [isAnimationOn, setisAnimationOn] = useState(false);
 
-  console.log(currentFoto);
+  // console.log(currentFoto);
   function chooseFoto(){
     switch (currentFoto) {
       case galleryArr[0]:

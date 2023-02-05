@@ -64,7 +64,7 @@ function App() {
   const [isVisuallyImpairedPopup, setIsVisuallyImpairedPopup] = useState(false);
   const [isOpenNavigate, setIsOpenNavigate] = useState(false);
 
-  useEffect(()=> {
+  useEffect(() => {
     function onCloseEsc (evt) {
       if (evt.key === 'Escape') {closeAllPopups()}
     }

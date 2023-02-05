@@ -1,8 +1,9 @@
+// для публичного сервера
+
 const express = require('express');
 const router = require('express').Router();
 
-// const { PORT = 3001, NODE_ENV } = process.env; // для локального хоста
-const { PORT = 3000, NODE_ENV } = process.env; // для публичного сервера
+const { PORT = 3000, NODE_ENV } = process.env;
 const app = express();
 
 app.use(express.json());
