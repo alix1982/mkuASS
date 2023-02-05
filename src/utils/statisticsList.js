@@ -183,14 +183,14 @@ const statistic = [
     },
     {
       "year": "2021",
-      "trip": 0,
-      "rescued": 0,
+      "trip": 1955,
+      "rescued": 206,
       id: 31,
     },
     {
       "year": "2022",
-      "trip": 0,
-      "rescued": 0,
+      "trip": 1865,
+      "rescued": 203,
       id: 32,
     },
 ]
