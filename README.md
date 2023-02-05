@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# mkuASS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Рабочий сайт, с использованием библиотеки React. Запуск сервера на Node.js c использованием фреймворка Express.
 
-## Available Scripts
+2. Реализована семантическая верстка и стилизация по БЭМ, применение хуков (использование стейт переменных, эффектов, навигации), работа с несколькими файлами js, создание сервера.
 
-In the project directory, you can run:
+3. Доработать слайдер(анимация и пагинация), помедитировать над дизайном.
 
-### `npm start`
++ [Ссылка на проект в GitHub](https://github.com/alix1982/mkuASS)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Запуск проекта
 
-### `npm test`
+<!-- ### Для запуска проекта удаленно:
+- предварительно установить [Node.js](https://nodejs.org/en/download/) и [MangoDB](https://mongodb.prakticum-team.ru/try/download/community),
+- задать адрес обращения приложения к серверу (задать переменной `MAIN_URL` нужный адрес сервера в компоненте `movies-explorer-frontend/utils/MainApi.js` (строка 1-2)),
+- залить проект на облачный сервер:
+  - скопировать бекенд часть на сервер через консоль,
+  - для копирования фронтенд части в компилированном виде использовать `npm run deploy` из директории `movies-explorer-frontend/`, предварительно в `movies-explorer-frontend/package.json` настроить скрипт `deploy`, изменив в нем имя облачного сервера (изменить `movie@130.193.51.14`),
+- установить зависимости (npm i) отдельно для фронтенда и бекенда,
+- установить и настроить работу pm2,
+- настроить работу портов сервера (nginx),
+- установить сертификаты SSL,
+- оставить комментарии в GitHub по совершенствованию проекта.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Для запуска проекта локально:
+- предварительно установить [Node.js](https://nodejs.org/en/download/) и [MangoDB](https://mongodb.prakticum-team.ru/try/download/community),
+- клонировать проект c gitHub,
+- задать адрес обращения приложения к локальному серверу (задать переменной `MAIN_URL` значение `http://localhost:3001` в компоненте `movies-explorer-frontend/utils/MainApi.js` (строка 1-2)),
+- настроить работу сервера локально на порту 3001 (задать переменной PORT значение 3001 в компоненте `movies-explorer-api/app.js` (строка 12-13)),
+- установить зависимости (npm i) отдельно для фронтенда и бекенда,
+- запустить установленную локально базу данных MangoDB (в консоли 'mongod'),
+- запустить сервер из папки `movies-explorer-api/`:
+  - `npm run start` — запускает сервер, 
+  - `npm run dev` — запускает сервер в режиме разработки (с hot-reload),
 
-### `npm run build`
+- запустить приложение из папки `movies-explorer-frontend/`:
+  - `npm run start` — запускает приложение. -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
