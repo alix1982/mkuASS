@@ -7,6 +7,16 @@ body {
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 800px) {
+  body {
+    margin: 0 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0 10px;
+  }
+}
 @import url(vendor/normalize.css);
 @import url(vendor/fonts/Inter_Web/inter.css);
 @import url(components/Header/header.css);
@@ -14,8 +24,8 @@ body {
 @import url(components/Main/main.css);
 @import url(components/Main/Gallery/gallery.css);
 @import url(components/Main/Licenses/licenses.css);
-
 @import url(components/HeaderMain/headerMain.css);
+
 @import url(components/About/Managers/managers.css);
 @import url(components/About/Purpose/purpose.css);
 @import url(components/About/Structure/structure.css);
@@ -26,15 +36,32 @@ body {
 @import url(components/About/Documents/documents.css);
 
 @import url(components/WorksAndServices/worksAndServices.css);
+
+@import url(components/InformationEducation/informationEducation.css);
+@import url(components/InformationEducation/SampleApplications/sampleApplications.css);
+@import url(components/InformationEducation/BasicInformation/basicInformation.css);
+@import url(components/InformationEducation/StructureInformationEducation/structureInformationEducation.css);
+@import url(components/InformationEducation/DocumentsEducation/documentsEducation.css);
+@import url(components/InformationEducation/Education/education.css);
+@import url(components/InformationEducation/EducationalStandards/educationalStandards.css);
+@import url(components/InformationEducation/TeachingStaff/teachingStaff.css);
+@import url(components/InformationEducation/MaterialTechnicalSupport/materialTechnicalSupport.css);
+@import url(components/InformationEducation/Scholarships/scholarships.css);
+@import url(components/InformationEducation/PaidEducational/paidEducational.css);
+@import url(components/InformationEducation/FinancialActivity/financialActivity.css);
+@import url(components/InformationEducation/VacantPlaces/vacantPlaces.css);
+
 @import url(components/News/news.css);
 @import url(components/UsefulInformation/usefulInformation.css);
 @import url(components/PhotosVideos/photosVideos.css);
 @import url(components/Contacts/contacts.css);
+@import url(components/QuestionsAnswers/questionsAnswers.css);
 
 @import url(components/Footer/footer.css);
-
-/* @import url(components/Navigation/navigation.css); */
 @import url(components/NoPage/noPage.css);
 @import url(components/NoRoute/noRoute.css);
+@import url(components/ImagePopup/imagePopup.css);
+@import url(components/VisuallyImpairedPopup/visuallyImpairedPopup.css);
+@import url(components/VisuallyImpairedPopup/modifiedClasses.css);
 
 /* outline: red solid 1px; */
