@@ -8,25 +8,29 @@ import docPlanPodgotovki2022 from './documents/documentsPlans/plan-podgotovki-do
 
 const documentsListPlans = [
   {
-    titleDoc: "План комплектования курсов гражданской обороны, защиты от чрезвычайных ситуаций и пожарной безопасности Сeвeродвинска на 2023 год",
+    titleDoc:
+      'План комплектования курсов гражданской обороны, защиты от чрезвычайных ситуаций и пожарной безопасности Сeвeродвинска на 2023 год',
     typeDoc: icon_doc_1,
     path: docPlanKomplektovaniya2023,
     docId: 1,
   },
   {
-    titleDoc: "План комплектования курсов гражданской обороны, защиты от чрезвычайных ситуаций и пожарной безопасности на 2022 год",
+    titleDoc:
+      'План комплектования курсов гражданской обороны, защиты от чрезвычайных ситуаций и пожарной безопасности на 2022 год',
     typeDoc: icon_doc_1,
     path: docPlanKomplektovaniya2022,
     docId: 2,
   },
   {
-    titleDoc: "План подготовки должностных лиц на курсах ГО Северодвинска на 2023 год",
+    titleDoc:
+      'План подготовки должностных лиц на курсах ГО Северодвинска на 2023 год',
     typeDoc: icon_doc_1,
     path: docPlanPodgotovki2023,
     docId: 3,
   },
   {
-    titleDoc: "План подготовки должностных лиц на Курсах ГО Северодвинска на 2022 год",
+    titleDoc:
+      'План подготовки должностных лиц на Курсах ГО Северодвинска на 2022 год',
     typeDoc: icon_doc_1,
     path: docPlanPodgotovki2022,
     docId: 4,
@@ -37,6 +41,6 @@ const documentsListPlans = [
   //   path: docSanepid,
   //   docId: 5,
   // },
-]
+];
 
-export default documentsListPlans
+export default documentsListPlans;

@@ -32,8 +32,8 @@
 }
 .news__pointImg {
   padding: 5px;
-  width: calc((100vw - 160px)/4);
-  height: calc((100vw - 100px)/4);
+  width: calc((100vw - 160px) / 4);
+  height: calc((100vw - 100px) / 4);
   object-fit: cover;
 }
 .news__pointImgOnePhoto {

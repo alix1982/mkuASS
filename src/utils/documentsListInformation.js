@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import icon_doc_1 from '../images/icon_doc_1.png';
 import docTelefony from './documents/documentsInformation/telefony-ekstrennyh-sluzhb.doc';
 import docVoda from './documents/documentsInformation/voda-min.pdf';
@@ -20,95 +20,96 @@ import docLeto from './documents/documentsInformation/Bezopasnoe-leto-na-dache.p
 
 const documentsListInformation = [
   {
-    titleDoc: "Телефоны экстренных служб",
+    titleDoc: 'Телефоны экстренных служб',
     typeDoc: icon_doc_1,
-    path: docTelefony ,
+    path: docTelefony,
     docId: 1,
   },
   {
-    titleDoc: "Как вести себя на воде",
+    titleDoc: 'Как вести себя на воде',
     typeDoc: icon_doc_1,
     path: docVoda,
     docId: 2,
   },
   {
-    titleDoc: "Правила безопасности при обращении с газом",
+    titleDoc: 'Правила безопасности при обращении с газом',
     typeDoc: icon_doc_1,
     path: docGaz,
     docId: 3,
   },
   {
-    titleDoc: "Гроза и молния: как обезопасить себя",
+    titleDoc: 'Гроза и молния: как обезопасить себя',
     typeDoc: icon_doc_1,
     path: docGroza,
     docId: 4,
   },
   {
-    titleDoc: "Памятка по применению гражданами бытовых пиротехнических изделий",
+    titleDoc:
+      'Памятка по применению гражданами бытовых пиротехнических изделий',
     typeDoc: icon_doc_1,
     path: docPirotehnika,
     docId: 5,
   },
   {
-    titleDoc: "Осторожно: лед!",
+    titleDoc: 'Осторожно: лед!',
     typeDoc: icon_doc_1,
     path: docLed,
     docId: 6,
   },
   {
-    titleDoc: "Действия населения в случае наводнения",
+    titleDoc: 'Действия населения в случае наводнения',
     typeDoc: icon_doc_1,
     path: docNavodnenie,
     docId: 7,
   },
   {
-    titleDoc: "Безопасность в лесу",
+    titleDoc: 'Безопасность в лесу',
     typeDoc: icon_doc_1,
     path: docLes,
     docId: 8,
   },
   {
-    titleDoc: "Разбился ртутный градусник! Что делать?",
+    titleDoc: 'Разбился ртутный градусник! Что делать?',
     typeDoc: icon_doc_1,
     path: docGradusnik,
     docId: 9,
   },
   {
-    titleDoc: "Действия населения в случае химической аварии",
+    titleDoc: 'Действия населения в случае химической аварии',
     typeDoc: icon_doc_1,
     path: docHim,
     docId: 10,
   },
   {
-    titleDoc: "Действия населения в случае радиационной аварии",
+    titleDoc: 'Действия населения в случае радиационной аварии',
     typeDoc: icon_doc_1,
     path: docRadiacziya,
     docId: 11,
   },
   {
-    titleDoc: "Действия при угрозе террористического характера",
+    titleDoc: 'Действия при угрозе террористического характера',
     typeDoc: icon_doc_1,
     path: docTerror,
     docId: 12,
   },
   {
-    titleDoc: "Действия при пожаре в здании",
+    titleDoc: 'Действия при пожаре в здании',
     typeDoc: icon_doc_1,
     path: docPozhar,
     docId: 13,
   },
   {
-    titleDoc: "Правила безопасности при движении в транспорте",
+    titleDoc: 'Правила безопасности при движении в транспорте',
     typeDoc: icon_doc_1,
     path: docTransport,
     docId: 14,
   },
   {
-    titleDoc: "Безопасное лето на даче",
+    titleDoc: 'Безопасное лето на даче',
     typeDoc: icon_doc_1,
     path: docLeto,
     docId: 15,
   },
-]
+];
 
-export default documentsListInformation
+export default documentsListInformation;

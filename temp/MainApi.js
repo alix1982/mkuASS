@@ -30,7 +30,7 @@ class MainApi {
     })
       .then(res => this._getStatus(res))
     );
-  } 
+  }
 
   getCards = () => {
     this._setJwt(localStorage.getItem('token'));
