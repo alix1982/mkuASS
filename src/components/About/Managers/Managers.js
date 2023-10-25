@@ -3,8 +3,9 @@ import React from 'react';
 import pozdyakov from '../../../images/photoManagers/Pozdyakov.jpg';
 import nikulin from '../../../images/photoManagers/Nikulin.jpg';
 import sopin from '../../../images/photoManagers/Sopin.jpg';
-import konopleva from '../../../images/photoManagers/Konopleva.jpg';
+// import konopleva from '../../../images/photoManagers/Konopleva.jpg';
 import maksimova from '../../../images/photoManagers/Maksimova.jpg';
+import kondratova from '../../../images/photoManagers/Kondratova.jpg';
 
 function Managers() {
   // добавить цикл с отрисовкой карточек
@@ -48,13 +49,13 @@ function Managers() {
         </li>
         <li className='manager'>
           <div className='manager__contentPhoto'>
-            <img src={konopleva} className='manager__photo' />
+            <img src={kondratova} className='manager__photo' />
             <p className='manager__description'>
               Поздяков Дмитрий Юрьевич. Родился 5 октября 1982 в г.Северодвинске, Архангельской области. В 2004 г. окончил Архангельский государственный технический университет по специальности «Лесное и лесопарковое хозяйство». С 2005 по 2007 г. проходил срочную службу на Тихоокеанском флоте, в должности командира роты морской пехоты.
               С 2008 года работал спасателем Аварийно-спасательной службы Северодвинска, начальником поисково-спасательного отряда, заместителем начальника службы по поисково-спасательной работе. В мае 2022 г. назначен на должность начальника службы.
             </p>
           </div>
-          <p className='manager__name'>Коноплева Наталья Владимировна</p>
+          <p className='manager__name'>Кондратова Елена Александровна</p>
           <p className='manager__post'>Главный бухгалтер</p>
         </li>
         <li className='manager'>
