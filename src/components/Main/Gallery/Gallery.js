@@ -68,7 +68,7 @@ function Gallery() {
   useEffect(() => {
     switchingPhoto;
   }, [counterGallery]);
-  console.log(switchingPhoto);
+  // console.log(switchingPhoto);
 
   function setPhotoGallery(endArray, valueEndArray) {
     galleryArr.forEach((item, index) => {
@@ -153,27 +153,32 @@ function Gallery() {
   return (
     <section className='gallery'>
       {/* <button className={`gallery__buttonLeft ${isAnimationOn ? "gallery__animation" : ""}`} onClick={onSwitchingPhotoLeft}> */}
-      <button className='gallery__buttonLeft' onClick={onSwitchingPhotoLeft}>
-        <img
-          src={currentPhotoPrevious}
-          className='gallery__buttonLeftImg'
-          alt='предыдущее фото'
-        />
-      </button>
-      <img src={currentPhoto} className='gallery__photo' alt='фото' />
-      {/* <button className={`gallery__buttonRight ${isAnimationOn ? "gallery__animation" : ""}`} onClick={onSwitchingPhotoRight}> */}
-      <button className='gallery__buttonRight' onClick={onSwitchingPhotoRight}>
-        <img
-          src={currentPhotoNext}
-          className='gallery__buttonRightImg'
-          alt='следующее фото'
-        />
-      </button>
-      <p className='gallery__text'>
-        Муниципальное казенное учреждение
-        <br />
-        &laquo;Аварийно-спасательная служба Северодвинска &raquo;
-      </p>
+      <div className='gallery__left'>
+        <button className='gallery__buttonLeft' onClick={onSwitchingPhotoLeft}>
+          <img
+            src={currentPhotoPrevious}
+            className='gallery__buttonLeftImg'
+            alt='предыдущее фото'
+          />
+        </button>
+        <img src={currentPhoto} className='gallery__photo' alt='фото' />
+        {/* <button className={`gallery__buttonRight ${isAnimationOn ? "gallery__animation" : ""}`} onClick={onSwitchingPhotoRight}> */}
+        <button
+          className='gallery__buttonRight'
+          onClick={onSwitchingPhotoRight}
+        >
+          <img
+            src={currentPhotoNext}
+            className='gallery__buttonRightImg'
+            alt='следующее фото'
+          />
+        </button>
+        <p className='gallery__text'>
+          Муниципальное казенное учреждение
+          <br />
+          &laquo;Аварийно-спасательная служба Северодвинска &raquo;
+        </p>
+      </div>
     </section>
   );
 }

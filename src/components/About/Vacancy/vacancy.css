@@ -36,6 +36,9 @@
 .vacancy__point:first-child {
   border-top: none;
 }
+.vacancy__none {
+  text-align: center;
+}
 @media screen and (max-width: 600px) {
   .vacancy__point {
     font-size: 12px;

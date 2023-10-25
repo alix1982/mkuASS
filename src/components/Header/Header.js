@@ -31,8 +31,8 @@ function Header(props) {
         <Link to='/' className='header__linkLogo'>
           <img src={logo_mku_ass} className='header__imgLogo' alt='Логотип' />
           <h1 className='header__institution'>
-            Муниципальное казенное учреждение <br /> «Аварийно-спасательная
-            служба Северодвинска»
+            Муниципальное казенное учреждение <br />
+            «Аварийно-спасательная служба Северодвинска»
           </h1>
         </Link>
         <p className='header__numberTel'>

@@ -1,11 +1,18 @@
 // импорты для реакта
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Route, Routes, useNavigate, Link } from 'react-router-dom';
+import {
+  Route,
+  Routes,
+  useNavigate,
+  Link,
+  useLocation,
+} from 'react-router-dom';
 
 // импорт роутов
 import Header from '../Header/Header.js';
 import Main from '../Main/Main.js';
+import Baner from '../Header/Baner/Baner.js';
 import Navigation from '../Navigation/Navigation.js';
 import HeaderMain from '../HeaderMain/HeaderMain.js';
 
@@ -66,13 +73,19 @@ function App() {
   // const [currentCard, setCurrentCard] = useState([]);  // карточки с сервера практикума отфильтрованные пользователем
 
   let navigate = useNavigate();
-  const [
-    // isImgPopupOpen,
-    setIsImgPopup,
-  ] = useState(false);
+  const [isImgPopupOpen, setIsImgPopup] = useState(false);
   const [selectedCard, setSelectedCard] = useState();
   const [isVisuallyImpairedPopup, setIsVisuallyImpairedPopup] = useState(false);
   const [isOpenNavigate, setIsOpenNavigate] = useState(false);
+  console.log(isImgPopupOpen); // чтобы убрать ошибку EsLint
+  // отображение главной страницы ниже из-за банера
+  const location = useLocation();
+  useEffect(() => {
+    console.log(window.screen.width);
+    location.pathname !== '/' || window.screen.width <= 600
+      ? window.scrollTo(0, 0)
+      : window.scrollTo(0, 200);
+  }, [location.pathname, window.screen.width]);
 
   useEffect(() => {
     function onCloseEsc(evt) {
@@ -87,7 +100,6 @@ function App() {
   });
 
   function onCloseOverlay(evt) {
-    // console.log(evt);
     evt.target === evt.currentTarget && closeAllPopups();
   }
 
@@ -285,6 +297,7 @@ function App() {
           path='/'
           element={
             <>
+              <Baner />
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}

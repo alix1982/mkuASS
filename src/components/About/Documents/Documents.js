@@ -1,6 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-// import icon_doc from '../../../images/icon_doc.png';
 import documents from '../../../utils/documentsList';
 
 function Documents(props) {

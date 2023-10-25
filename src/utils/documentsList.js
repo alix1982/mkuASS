@@ -12,6 +12,8 @@ import docZaklyuchenie from './documents/documentsMKU/Zaklyuchenie-pozharnyh-001
 import docPrikaz from './documents/documentsMKU/Prikaz-o-naznachenii-nachalnika-MKU-ASS-Severodvinska-001.pdf';
 import docKorupcia from './documents/documentsMKU/Plan-protivodejstvie-korrupczii-na-2021-2024-gody.pdf';
 import docSOUT from './documents/documentsMKU/Rezultaty-provedeniya-SOUT.pdf';
+import docUchetnayPolitika2023 from './documents/documentsMKU/Prikaz-ob-uchtetnoy-politike-2023.pdf';
+
 // import doc from './documents/documentsMKU/test_pdf.pdf';
 // import doc from './documents/documentsMKU/test_pdf.pdf';
 // import doc from './documents/documentsMKU/test_pdf.pdf';
@@ -81,42 +83,12 @@ const documentsList = [
     path: docSOUT,
     docId: 9,
   },
-  // {
-  //   titleDoc: "Название документа3",
-  //   typeDoc: icon_doc_1,
-  //   path: pdfTest,
-  //   docId: 3,
-  // },
-  // {
-  //   titleDoc: "Название документа3",
-  //   typeDoc: icon_doc_1,
-  //   path: pdfTest,
-  //   docId: 3,
-  // },
-  // {
-  //   titleDoc: "Название документа3",
-  //   typeDoc: icon_doc_1,
-  //   path: pdfTest,
-  //   docId: 3,
-  // },
-  // {
-  //   titleDoc: "Название документа3",
-  //   typeDoc: icon_doc_1,
-  //   path: pdfTest,
-  //   docId: 3,
-  // },
-  // {
-  //   titleDoc: "Название документа3",
-  //   typeDoc: icon_doc_1,
-  //   path: pdfTest,
-  //   docId: 3,
-  // },
-  // {
-  //   titleDoc: "Название документа3",
-  //   typeDoc: icon_doc_1,
-  //   path: pdfTest,
-  //   docId: 3,
-  // },
+  {
+    titleDoc: 'Учётная политика',
+    typeDoc: icon_doc_1,
+    path: docUchetnayPolitika2023,
+    docId: 10,
+  },
 ];
 
 export default documentsList;

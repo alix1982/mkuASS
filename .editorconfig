@@ -32,4 +32,4 @@ trim_trailing_whitespace = false
 # Possible values - true, false
 insert_final_newline = true
 
-max_line_length = 140
+max_line_length = 1000

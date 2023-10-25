@@ -24,7 +24,17 @@
   animation-name: slideinOpacity;
 }
 .gallery {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* width: 70%; */
+  height: calc(40vw - 40px);
+  /* display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: calc(40vw - 40px); */
+  /* background-color: #024896; */
+}
+.gallery__left {
+  /* width: 70%; */
   height: calc(40vw - 40px);
   display: grid;
   grid-template-columns: repeat(7, 1fr);
