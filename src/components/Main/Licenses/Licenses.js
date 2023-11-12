@@ -7,6 +7,7 @@ import obrLicense_3 from '../../../images/licenses/Obrazovatelnaya-liczenziya_St
 import medLicense_1 from '../../../images/licenses/Liczenziya-na-mediczinskuyu-deyatelnost-1-001.jpg';
 import medLicense_2 from '../../../images/licenses/Liczenziya-na-mediczinskuyu-deyatelnost-2-001.jpg';
 import medLicense_3 from '../../../images/licenses/Liczenziya-na-mediczinskuyu-deyatelnost-3-001.jpg';
+import banerAdminSeverod from '../../../images/adminSeverod/600x120.png';
 
 function Licenses(props) {
   return (
@@ -84,6 +85,7 @@ function Licenses(props) {
           </button>
         </li>
       </ul>
+      <img className='footer__banerAdminSeverod' src={banerAdminSeverod}/>
     </section>
   );
 }

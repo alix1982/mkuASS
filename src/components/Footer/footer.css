@@ -5,9 +5,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.footer__banerAdminSeverod {
-  margin: 0 auto;
-}
+
 .footer__partners {
   margin: 0;
   padding-top: 79px;
@@ -68,12 +66,6 @@
   }
   .footer__nav {
     margin: 0 30px 20px;
-  }
-}
-@media screen and (max-width: 650px) {
-  .footer__banerAdminSeverod {
-    width: 100%;
-    object-fit: contain;
   }
 }
 @media screen and (max-width: 400px) {

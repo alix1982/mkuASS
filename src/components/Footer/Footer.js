@@ -1,10 +1,9 @@
 import React from 'react';
-import banerAdminSeverod from '../../images/adminSeverod/600x120.png'
 
 function Footer() {
   return (
     <footer className='footer'>
-      <img className='footer__banerAdminSeverod' src={banerAdminSeverod}/>
+
       <p className='footer__partners'>Первый проект Alix2019 х Nata.</p>
       <div className='footer__line'></div>
       <div className='footer__nav'>

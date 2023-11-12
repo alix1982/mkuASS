@@ -32,6 +32,10 @@
   height: 26vw;
   object-fit: contain;
 }
+.footer__banerAdminSeverod {
+  display: block;
+  margin: 0 auto;
+}
 
 @media screen and (min-width: 1500px) {
   .licenses__point {
@@ -41,5 +45,11 @@
   .licenses__photo {
     width: 300px;
     height: 390px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .footer__banerAdminSeverod {
+    width: 100%;
+    object-fit: contain;
   }
 }
