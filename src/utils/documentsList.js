@@ -7,19 +7,12 @@ import docPostanovlenie from './documents/documentsMKU/Postanovlenie-Administrac
 import docYstav from './documents/documentsMKU/Ystav.pdf';
 import docLiczenziya from './documents/documentsMKU/Obrazovatelnaya-liczenziya.pdf';
 import docSvidetelstvo from './documents/documentsMKU/Svidetelstvo-o-postanovke-na-uchet-v-nalogovom-organe.pdf';
-import docSanepid from './documents/documentsMKU/Sanepid-zaklyuchenie-001.pdf';
+// import docSanepid from './documents/documentsMKU/Sanepid-zaklyuchenie-001.pdf';
 import docZaklyuchenie from './documents/documentsMKU/Zaklyuchenie-pozharnyh-001.pdf';
-import docPrikaz from './documents/documentsMKU/Prikaz-o-naznachenii-nachalnika-MKU-ASS-Severodvinska-001.pdf';
+// import docPrikaz from './documents/documentsMKU/Prikaz-o-naznachenii-nachalnika-MKU-ASS-Severodvinska-001.pdf';
 import docKorupcia from './documents/documentsMKU/Plan-protivodejstvie-korrupczii-na-2021-2024-gody.pdf';
 import docSOUT from './documents/documentsMKU/Rezultaty-provedeniya-SOUT.pdf';
 import docUchetnayPolitika2023 from './documents/documentsMKU/Prikaz-ob-uchtetnoy-politike-2023.pdf';
-
-// import doc from './documents/documentsMKU/test_pdf.pdf';
-// import doc from './documents/documentsMKU/test_pdf.pdf';
-// import doc from './documents/documentsMKU/test_pdf.pdf';
-// import doc from './documents/documentsMKU/test_pdf.pdf';
-// import doc from './documents/documentsMKU/test_pdf.pdf';
-// import doc from './documents/documentsMKU/test_pdf.pdf';
 
 const documentsList = [
   {
@@ -50,12 +43,12 @@ const documentsList = [
     path: docSvidetelstvo,
     docId: 4,
   },
-  {
-    titleDoc: 'Санитарно-эпидемиологическое заключение',
-    typeDoc: icon_doc_1,
-    path: docSanepid,
-    docId: 5,
-  },
+  // {
+  //   titleDoc: 'Санитарно-эпидемиологическое заключение',
+  //   typeDoc: icon_doc_1,
+  //   path: docSanepid,
+  //   docId: 5,
+  // },
   {
     titleDoc:
       'Заключение о соответствии объекта защиты требованиям пожарной безопасности',
@@ -63,13 +56,13 @@ const documentsList = [
     path: docZaklyuchenie,
     docId: 6,
   },
-  {
-    titleDoc:
-      'Приказ Председателя Комитета по управлению муниципальным имуществом Администрации МО «Северодвинск» о назначении на должность начальника МУ «АСС Северодвинска»',
-    typeDoc: icon_doc_1,
-    path: docPrikaz,
-    docId: 7,
-  },
+  // {
+  //   titleDoc:
+  //     'Приказ Председателя Комитета по управлению муниципальным имуществом Администрации МО «Северодвинск» о назначении на должность начальника МУ «АСС Северодвинска»',
+  //   typeDoc: icon_doc_1,
+  //   path: docPrikaz,
+  //   docId: 7,
+  // },
   {
     titleDoc:
       'План противодействия коррупции в МКУ «АСС Северодвинска» на 2021-2024 годы',

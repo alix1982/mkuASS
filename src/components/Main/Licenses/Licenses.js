@@ -6,6 +6,7 @@ import obrLicense_2 from '../../../images/licenses/Obrazovatelnaya-liczenziya_St
 import obrLicense_3 from '../../../images/licenses/Obrazovatelnaya-liczenziya_Stranicza_3.jpg';
 import medLicense_1 from '../../../images/licenses/Liczenziya-na-mediczinskuyu-deyatelnost-1-001.jpg';
 import medLicense_2 from '../../../images/licenses/Liczenziya-na-mediczinskuyu-deyatelnost-2-001.jpg';
+import sanepid_zaklychenie from '../../../images/licenses/sanepid-zaklyuchenie.png'
 import medLicense_3 from '../../../images/licenses/Liczenziya-na-mediczinskuyu-deyatelnost-3-001.jpg';
 import banerAdminSeverod from '../../../images/adminSeverod/600x120.png';
 
@@ -82,6 +83,16 @@ function Licenses(props) {
             }}
           >
             <img src={medLicense_3} className='licenses__photo' />
+          </button>
+        </li>
+        <li className='licenses__point'>
+          <button
+            className='licenses__buttonPopup'
+            onClick={() => {
+              props.openImg(sanepid_zaklychenie);
+            }}
+          >
+            <img src={sanepid_zaklychenie} className='licenses__photo' />
           </button>
         </li>
       </ul>

@@ -57,9 +57,9 @@
 .navigation__listItem:hover .navigation__sublist {
   display: flex;
   position: absolute;
-  padding: 15px;
+  /* padding: 15px; */
   background-color: #ffffff;
-  z-index: 2;
+  z-index: 3;
   /* top: -20px;
   left: -20px; */
 }
@@ -149,7 +149,7 @@
     white-space: pre-wrap;
     background-color: #ffffff;
     border-radius: 5px;
-    z-index: 2;
+    z-index: 3;
     font-family: Inter, Georgia, sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -165,8 +165,8 @@
   }
   .navigation__pointButton {
     justify-content: center;
-    width: 100%;
-    padding: 10px 0;
+    width: calc(100% - 20px);
+    padding: 10px;
   }
   .navigation__pointButton_active {
     background-color: #ebebeb;
@@ -177,7 +177,8 @@
     border-bottom: 1px solid #024896;
   }
   .navigation__sublist {
-    display: flex;
+    /* display: none; */
+    height: 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -186,7 +187,10 @@
   .navigation__listItem:hover .navigation__sublist {
     position: static;
     display: flex;
-    align-items: flex-end;
+    height: 100%;
+    transition: height 2s linear;
+
+    /* align-items: flex-end; */
   }
   .navigation__subpoint {
     width: 45%;

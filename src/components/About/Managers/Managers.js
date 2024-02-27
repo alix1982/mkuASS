@@ -19,12 +19,10 @@ function Managers() {
           <div className='manager__contentPhoto'>
             <img src={pozdyakov} className='manager__photo' />
             <div className='manager__description'>
-              <div>
                 <h4>Опыт работы:</h4>
-                <p>
+                <p className='manager__descriptionText'>
                   С 2008 года работал спасателем Аварийно-спасательной службы Северодвинска, начальником поисково-спасательного отряда, заместителем начальника службы по поисково-спасательной работе. В мае 2022 г. назначен на должность начальника службы.
                 </p>
-              </div>
               {/* <p>
                 Email: <Link to="mailto:sgssnpso@yandex.ru">sgssnpso@yandex.ru</Link>
                 <a href="mailto:sgssnpso@yandex.ru">sgssnpso@yandex.ru</a>
@@ -39,10 +37,12 @@ function Managers() {
         <li className='manager'>
           <div className='manager__contentPhoto'>
             <img src={nikulin} className='manager__photo' />
-            {/* <p className='manager__description'>
-              Поздяков Дмитрий Юрьевич. Родился 5 октября 1982 в г.Северодвинске, Архангельской области. В 2004 г. окончил Архангельский государственный технический университет по специальности «Лесное и лесопарковое хозяйство». С 2005 по 2007 г. проходил срочную службу на Тихоокеанском флоте, в должности командира роты морской пехоты.
-              С 2008 года работал спасателем Аварийно-спасательной службы Северодвинска, начальником поисково-спасательного отряда, заместителем начальника службы по поисково-спасательной работе. В мае 2022 г. назначен на должность начальника службы.
-            </p> */}
+            {/* <div className='manager__description'>
+                <h4>Опыт работы:</h4>
+                <p className='manager__descriptionText'>
+                  С 2007 года работал спасателем Аварийно-спасательной службы Северодвинска. В мае 2022 г. назначен на должность заместителя начальника.
+                </p>
+            </div> */}
           </div>
           <p className='manager__name'>Никулин Александр Васильевич</p>
           <p className='manager__post'>Заместитель начальника по ПСР</p>
