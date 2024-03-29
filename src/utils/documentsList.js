@@ -12,7 +12,7 @@ import docZaklyuchenie from './documents/documentsMKU/Zaklyuchenie-pozharnyh-001
 // import docPrikaz from './documents/documentsMKU/Prikaz-o-naznachenii-nachalnika-MKU-ASS-Severodvinska-001.pdf';
 import docKorupcia from './documents/documentsMKU/Plan-protivodejstvie-korrupczii-na-2021-2024-gody.pdf';
 import docSOUT from './documents/documentsMKU/Rezultaty-provedeniya-SOUT.pdf';
-import docUchetnayPolitika2023 from './documents/documentsMKU/Prikaz-ob-uchtetnoy-politike-2023.pdf';
+import docUchetnayPolitika2023 from './documents/documentsMKU/Uchtetnay-politika-2023.doc';
 
 const documentsList = [
   {
