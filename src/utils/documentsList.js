@@ -12,7 +12,7 @@ import docZaklyuchenie from './documents/documentsMKU/Zaklyuchenie-pozharnyh-001
 // import docPrikaz from './documents/documentsMKU/Prikaz-o-naznachenii-nachalnika-MKU-ASS-Severodvinska-001.pdf';
 import docKorupcia from './documents/documentsMKU/Plan-protivodejstvie-korrupczii-na-2021-2024-gody.pdf';
 import docSOUT from './documents/documentsMKU/Rezultaty-provedeniya-SOUT.pdf';
-import docUchetnayPolitika2023 from './documents/documentsMKU/Uchtetnay-politika-2023.doc';
+import docUchetnayPolitika2023 from './documents/documentsMKU/Uchtetnay-politika-2023.pdf';
 
 const documentsList = [
   {
@@ -77,7 +77,7 @@ const documentsList = [
     docId: 9,
   },
   {
-    titleDoc: 'Учётная политика',
+    titleDoc: 'Основные положения учетной политики',
     typeDoc: icon_doc_1,
     path: docUchetnayPolitika2023,
     docId: 10,
