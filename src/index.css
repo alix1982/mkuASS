@@ -24,6 +24,7 @@ body {
 @import url(components/Navigation/navigation.css);
 @import url(components/Main/main.css);
 @import url(components/Main/Gallery/gallery.css);
+@import url(components/Main/Gallery_swiper/gallery_swiper.css);
 @import url(components/Main/Licenses/licenses.css);
 @import url(components/HeaderMain/headerMain.css);
 
