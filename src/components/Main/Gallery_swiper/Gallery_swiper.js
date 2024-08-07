@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 // import { Link } from 'react-router-dom';
 import photo1 from '../../../images/gallery/1.jpg';
-import photo2 from '../../../images/gallery/2.JPG';
+import photo2 from '../../../images/gallery/2.jpg';
 import photo3 from '../../../images/gallery/3.jpg';
 import photo4 from '../../../images/gallery/4.jpg';
 import photo5 from '../../../images/gallery/5.jpg';
@@ -41,11 +41,15 @@ function Gallery_swiper() {
           '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
         }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
         loop={true}
         spaceBetween={10}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[Autoplay, FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
       >
         <SwiperSlide>
@@ -118,6 +122,10 @@ function Gallery_swiper() {
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
       >
         <SwiperSlide>
           <img className="gallerySwiper__img" src={photo1} />
