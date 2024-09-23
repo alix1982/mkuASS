@@ -2,7 +2,7 @@ import React from 'react';
 // import HeaderMain from '../HeaderMain/HeaderMain.js';
 import newsList from '../../utils/newsList';
 
-function News() {
+function News(props) {
   //   console.log(newsList)
   function card(newNumber, key) {
     // console.log(newNumber.photos.length)
@@ -32,6 +32,9 @@ function News() {
               />
             );
           })}
+          {newNumber.docs && newNumber.docs.map((doc)=>
+            props.renderingDocument(doc, doc.docId)
+          )}
         </li>
       );
     } else {
@@ -39,7 +42,7 @@ function News() {
         <li className='news__point' key={key}>
           <h3 className='news__pointHeading'>{newNumber.heading}</h3>
           <p className='news__pointDate'>{newNumber.date}</p>
-          {newNumber.photos.map((photo, index) => {
+          {newNumber.photos && newNumber.photos.map((photo, index) => {
             return (
               <img
                 src={photo}
@@ -57,6 +60,9 @@ function News() {
               </p>
             );
           })}
+          {newNumber.docs && newNumber.docs.map((doc)=>
+            props.renderingDocument(doc, doc.docId)
+          )}
         </li>
       );
     }

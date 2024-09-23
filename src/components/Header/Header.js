@@ -40,7 +40,12 @@ function Header(props) {
           +7 (8184) 50-00-01
         </p>
       </div>
+      <article>
+        <Link to={'/news'}>
+          !!! Внесены изменения в план подготовки !!!
+        </Link>
 
+      </article>
       {/* <div className={`header__nav header__nav${props.offNavigation}`}>
         <Navigation
           isNavigationPopupOpen = {props.isNavigationPopupOpen}

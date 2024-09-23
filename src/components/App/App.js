@@ -764,7 +764,7 @@ function App() {
                 onCloseOverlay={(evt) => onCloseOverlay(evt)}
               />
               <HeaderMain headingText='Новости' />
-              <News />
+              <News renderingDocument={renderingDocument} />
               <Footer />
             </>
           }
