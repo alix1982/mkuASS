@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import {
   Route,
   Routes,
-  useNavigate,
+  // useNavigate,
   Link,
   useLocation,
 } from 'react-router-dom';
@@ -60,9 +60,6 @@ import {
 } from '../../contexts/CurrentUserContext.js';
 
 function App() {
-  // const [isNavigationPopupOpen, setIsNavigationPopup] = useState(false); // открытие попапа навигации
-  // const [loggedIn, setLoggedIn] = useState(false); // защита роутов
-  // const [allMovies, setAllMovies] = useState([]);  // карточки c сервера практикума
   const [
     currentUser,
     // setCurrentUser
@@ -72,20 +69,21 @@ function App() {
   }); //первоначальные данные пользователя
   // const [currentCard, setCurrentCard] = useState([]);  // карточки с сервера практикума отфильтрованные пользователем
 
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   const [isImgPopupOpen, setIsImgPopup] = useState(false);
   const [selectedCard, setSelectedCard] = useState();
   const [isVisuallyImpairedPopup, setIsVisuallyImpairedPopup] = useState(false);
   const [isOpenNavigate, setIsOpenNavigate] = useState(false);
   console.log(isImgPopupOpen); // чтобы убрать ошибку EsLint
+
   // отображение главной страницы ниже из-за банера
-  const location = useLocation();
+  const {pathname} = useLocation();
   useEffect(() => {
-    console.log(window.screen.width);
-    location.pathname !== '/' || window.screen.width <= 600
+    // console.log(window.screen.width);
+    pathname !== '/' || window.screen.width <= 600
       ? window.scrollTo(0, 0)
       : window.scrollTo(0, 200);
-  }, [location.pathname, window.screen.width]);
+  }, [pathname, window.screen.width]);
 
   useEffect(() => {
     function onCloseEsc(evt) {
@@ -139,122 +137,132 @@ function App() {
     setIsVisuallyImpairedPopup(true);
   }
 
+  // рендер блока Attention
+  const [path, setPath] = useState('');
+  const [isRenderAttention, setIsRenderAttention] = useState(true);
+
+  useEffect(()=>{
+    path === '' && setPath(pathname);
+    (pathname !== path && path !== '') && setIsRenderAttention(false)
+  },[pathname]);
+
+  // убрано тк не актуально, удалить после проверки (проверка с 25.09.2024)
   // переход на главную страницу при перезагрузке
-  let urlRoute = window.location.pathname;
-  function redirect() {
-    if (urlRoute === '/') {
-      navigate('/');
-      return;
-    }
-    if (urlRoute === '/managers') {
-      navigate('/managers');
-      return;
-    }
-    if (urlRoute === '/purpose') {
-      navigate('/purpose');
-      return;
-    }
-    if (urlRoute === '/structure') {
-      navigate('/structure');
-      return;
-    }
-    if (urlRoute === '/responsibility') {
-      navigate('/responsibility');
-      return;
-    }
-    if (urlRoute === '/history') {
-      navigate('/history');
-      return;
-    }
-    if (urlRoute === '/statistics') {
-      navigate('/statistics');
-      return;
-    }
-    if (urlRoute === '/vacancy') {
-      navigate('/vacancy');
-      return;
-    }
-    if (urlRoute === '/documents') {
-      navigate('/documents');
-      return;
-    }
-    if (urlRoute === '/worksAndServices') {
-      navigate('/worksAndServices');
-      return;
-    }
-    if (urlRoute === '/sampleApplications') {
-      navigate('/sampleApplications');
-      return;
-    }
-    if (urlRoute === '/basicInformation') {
-      navigate('/basicInformation');
-      return;
-    }
-    if (urlRoute === '/structureInformationEducation') {
-      navigate('/structureInformationEducation');
-      return;
-    }
-    if (urlRoute === '/documentsEducation') {
-      navigate('/documentsEducation');
-      return;
-    }
-    if (urlRoute === '/education') {
-      navigate('/education');
-      return;
-    }
-    if (urlRoute === '/educationalStandards') {
-      navigate('/educationalStandards');
-      return;
-    }
-    if (urlRoute === '/teachingStaff') {
-      navigate('/teachingStaff');
-      return;
-    }
-    if (urlRoute === '/materialTechnicalSupport') {
-      navigate('/materialTechnicalSupport');
-      return;
-    }
-    if (urlRoute === '/scholarships') {
-      navigate('/scholarships');
-      return;
-    }
-    if (urlRoute === '/paidEducational') {
-      navigate('/paidEducational');
-      return;
-    }
-    if (urlRoute === '/financialActivity') {
-      navigate('/financialActivity');
-      return;
-    }
-    if (urlRoute === '/vacantPlaces') {
-      navigate('/vacantPlaces');
-      return;
-    }
-    if (urlRoute === '/news') {
-      navigate('/news');
-      return;
-    }
-    if (urlRoute === '/usefulInformation') {
-      navigate('/usefulInformation');
-      return;
-    }
-    if (urlRoute === '/photosVideos') {
-      navigate('/photosVideos');
-      return;
-    }
-    if (urlRoute === '/contacts') {
-      navigate('/contacts');
-      return;
-    }
-    if (urlRoute === '/questionsAnswers') {
-      navigate('/questionsAnswers');
-      return;
-    }
-    navigate('/no-route');
-  }
-  useEffect(() => {
-    redirect();
-  }, []);
+  // let urlRoute = window.location.pathname;
+  // function redirect() {
+  //   if (urlRoute === '/') {
+  //     navigate('/');
+  //     return;
+  //   }
+  //   if (urlRoute === '/managers') {
+  //     navigate('/managers');
+  //     return;
+  //   }
+  //   if (urlRoute === '/purpose') {
+  //     navigate('/purpose');
+  //     return;
+  //   }
+  //   if (urlRoute === '/structure') {
+  //     navigate('/structure');
+  //     return;
+  //   }
+  //   if (urlRoute === '/responsibility') {
+  //     navigate('/responsibility');
+  //     return;
+  //   }
+  //   if (urlRoute === '/history') {
+  //     navigate('/history');
+  //     return;
+  //   }
+  //   if (urlRoute === '/statistics') {
+  //     navigate('/statistics');
+  //     return;
+  //   }
+  //   if (urlRoute === '/vacancy') {
+  //     navigate('/vacancy');
+  //     return;
+  //   }
+  //   if (urlRoute === '/documents') {
+  //     navigate('/documents');
+  //     return;
+  //   }
+  //   if (urlRoute === '/worksAndServices') {
+  //     navigate('/worksAndServices');
+  //     return;
+  //   }
+  //   if (urlRoute === '/sampleApplications') {
+  //     navigate('/sampleApplications');
+  //     return;
+  //   }
+  //   if (urlRoute === '/basicInformation') {
+  //     navigate('/basicInformation');
+  //     return;
+  //   }
+  //   if (urlRoute === '/structureInformationEducation') {
+  //     navigate('/structureInformationEducation');
+  //     return;
+  //   }
+  //   if (urlRoute === '/documentsEducation') {
+  //     navigate('/documentsEducation');
+  //     return;
+  //   }
+  //   if (urlRoute === '/education') {
+  //     navigate('/education');
+  //     return;
+  //   }
+  //   if (urlRoute === '/educationalStandards') {
+  //     navigate('/educationalStandards');
+  //     return;
+  //   }
+  //   if (urlRoute === '/teachingStaff') {
+  //     navigate('/teachingStaff');
+  //     return;
+  //   }
+  //   if (urlRoute === '/materialTechnicalSupport') {
+  //     navigate('/materialTechnicalSupport');
+  //     return;
+  //   }
+  //   if (urlRoute === '/scholarships') {
+  //     navigate('/scholarships');
+  //     return;
+  //   }
+  //   if (urlRoute === '/paidEducational') {
+  //     navigate('/paidEducational');
+  //     return;
+  //   }
+  //   if (urlRoute === '/financialActivity') {
+  //     navigate('/financialActivity');
+  //     return;
+  //   }
+  //   if (urlRoute === '/vacantPlaces') {
+  //     navigate('/vacantPlaces');
+  //     return;
+  //   }
+  //   if (urlRoute === '/news') {
+  //     navigate('/news');
+  //     return;
+  //   }
+  //   if (urlRoute === '/usefulInformation') {
+  //     navigate('/usefulInformation');
+  //     return;
+  //   }
+  //   if (urlRoute === '/photosVideos') {
+  //     navigate('/photosVideos');
+  //     return;
+  //   }
+  //   if (urlRoute === '/contacts') {
+  //     navigate('/contacts');
+  //     return;
+  //   }
+  //   if (urlRoute === '/questionsAnswers') {
+  //     navigate('/questionsAnswers');
+  //     return;
+  //   }
+  //   navigate('/no-route');
+  // }
+  // useEffect(() => {
+  //   redirect();
+  // }, []);
 
   // //открытие попапа навигации при разрешении меньше 800px
   // function handleOnPopupNavigation () {
@@ -301,6 +309,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -329,6 +338,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -348,6 +358,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -367,6 +378,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -386,6 +398,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -405,6 +418,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -424,6 +438,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -443,6 +458,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -462,6 +478,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -483,6 +500,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -505,6 +523,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -526,6 +545,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -545,6 +565,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -568,6 +589,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -587,6 +609,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -606,6 +629,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -625,6 +649,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -648,6 +673,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -671,6 +697,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -692,6 +719,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -711,6 +739,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -733,6 +762,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -757,6 +787,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -776,6 +807,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -795,6 +827,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -817,6 +850,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}
@@ -836,6 +870,7 @@ function App() {
               <Header
                 openVisuallyImpairedPopup={openVisuallyImpairedPopup}
                 isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
               />
               <Navigation
                 isOpenNavigate={isOpenNavigate}

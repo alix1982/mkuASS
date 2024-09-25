@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import icon_doc_1 from '../../../images/icon_doc_1.png';
 import documentsPlans from '../../../utils/documentsListPlans';
-import docProgrammaObrazovaniya2021 from '../../../utils/documents/Programma-dopolnitelnogo-professionalnogo-obrazovaniya-2021g-1.pdf';
+import docProgrammaObrazovaniya2021 from '../../../utils/documents/Programma-dopolnitelnogo-professionalnogo-obrazovaniya-2024.pdf';
 import docFormaZayavki from '../../../utils/documents/documentsApplications/Forma-zayavki-na-povyshenie-kvalifikaczii.doc';
 
 function Education(props) {

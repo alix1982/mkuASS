@@ -32,9 +32,11 @@ function News(props) {
               />
             );
           })}
-          {newNumber.docs && newNumber.docs.map((doc)=>
-            props.renderingDocument(doc, doc.docId)
-          )}
+          <ul className='news__pointList'>
+            {newNumber.docs && newNumber.docs.map((doc)=>
+              props.renderingDocument(doc, doc.docId)
+            )}
+          </ul>
         </li>
       );
     } else {
@@ -60,9 +62,11 @@ function News(props) {
               </p>
             );
           })}
-          {newNumber.docs && newNumber.docs.map((doc)=>
-            props.renderingDocument(doc, doc.docId)
-          )}
+          <ul className='news__pointList'>
+            {newNumber.docs && newNumber.docs.map((doc)=>
+              props.renderingDocument(doc, doc.docId)
+            )}
+          </ul>
         </li>
       );
     }

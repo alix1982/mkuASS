@@ -1,10 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import logo_mku_ass from '../../images/logo_mku_ass.png';
 import icon_tel from '../../images/icon_tel.png';
 import icon_visuallyImpaired from '../../images/icon_visuallyImpaired.png';
+import Attention from '../Attention/Attention';
 
 function Header(props) {
+  // const location = useLocation();
+
   return (
     <header className='header'>
       <div className='header__header'>
@@ -40,12 +43,9 @@ function Header(props) {
           +7 (8184) 50-00-01
         </p>
       </div>
-      <article>
-        <Link to={'/news'}>
-          !!! Внесены изменения в план подготовки !!!
-        </Link>
 
-      </article>
+      {props.isRenderAttention && <Attention />}
+
       {/* <div className={`header__nav header__nav${props.offNavigation}`}>
         <Navigation
           isNavigationPopupOpen = {props.isNavigationPopupOpen}

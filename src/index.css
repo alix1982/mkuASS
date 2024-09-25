@@ -65,5 +65,6 @@ body {
 @import url(components/ImagePopup/imagePopup.css);
 @import url(components/VisuallyImpairedPopup/visuallyImpairedPopup.css);
 @import url(components/VisuallyImpairedPopup/modifiedClasses.css);
+@import url(components/Attention/attention.css);
 
 /* outline: red solid 1px; */
