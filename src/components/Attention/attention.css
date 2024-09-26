@@ -4,11 +4,11 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
-  margin: 20px 0 12px 13.7%;
+  margin: 20px 0 32px 100px;
   text-decoration: none;
   font-family: Tahoma;
   font-size: 16px;
-  font-weight: 400;
+  /* font-weight: 400; */
   line-height: 24px;
   color: #C72424;
 }
@@ -17,7 +17,7 @@
 }
 .attention__linkContentButton {
   font-size: 20px;
-  font-weight: 700;
+  /* font-weight: 700; */
   line-height: 24.2px;
   color: #F5F5F5;
   background-color: #C72424;
@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 800px) {
   .attention__link {
-    margin: 20px auto 12px;
+    margin: 20px auto 32px;
   }
   .attention__linkContentButton {
     font-size: 14px;
