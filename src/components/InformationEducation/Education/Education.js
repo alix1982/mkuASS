@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import icon_doc_1 from '../../../images/icon_doc_1.png';
+import logo_mkuass from '../../../images/logo_mku_ass.png';
 import documentsPlans from '../../../utils/documentsListPlans';
 import docProgrammaObrazovaniya2021 from '../../../utils/documents/Programma-dopolnitelnogo-professionalnogo-obrazovaniya-2024.pdf';
 import docFormaZayavki from '../../../utils/documents/documentsApplications/Forma-zayavki-na-povyshenie-kvalifikaczii.doc';
@@ -110,9 +111,29 @@ function Education(props) {
             </p>
           </Link>
         </li>
+        <li className='education__point'>
+          <h3 className='education__pointHeading'>
+            Дистанционное обучение
+          </h3>
+          <p className='education__pointText'>
+            Вы сможете пройти необходимую программу обучения в области гражданской обороны и защиты населения и территорий от чрезвычайных ситуаций.
+          </p>
+          <a
+            href='https://mku-acc-courses.ru/'
+            className='documents__link'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <img className='documents__icon' src={logo_mkuass} alt='документ' />
+            <p className='documents__text'>
+              Платформа дистанционного обучения
+            </p>
+          </a>
+        </li>
       </ul>
     </section>
   );
 }
 
 export default Education;
+
