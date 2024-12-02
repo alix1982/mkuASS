@@ -1,3 +1,12 @@
 .sampleApplications {
   /* outline: red solid 1px; */
 }
+.sampleApplications__comment {
+  margin: 0 0 0 40px;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: red;
+}
