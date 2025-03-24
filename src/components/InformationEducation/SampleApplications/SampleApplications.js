@@ -9,9 +9,9 @@ function SampleApplications(props) {
           return props.renderingDocument(doc, doc.docId);
         })}
       </ul>
-      <p className='sampleApplications__comment'>
+      {/* <p className='sampleApplications__comment'>
         Заявки на проведение экскурсий в 2024г не принимаются.<br/>Будем рады встретиться в 2025г
-      </p>
+      </p> */}
     </section>
   );
 }

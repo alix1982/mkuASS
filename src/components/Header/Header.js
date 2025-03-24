@@ -3,7 +3,7 @@ import { Link} from 'react-router-dom';
 import logo_mku_ass from '../../images/logo_mku_ass.png';
 import icon_tel from '../../images/icon_tel.png';
 import icon_visuallyImpaired from '../../images/icon_visuallyImpaired.png';
-import Attention from '../Attention/Attention';
+// import Attention from '../Attention/Attention';
 
 function Header(props) {
   // const location = useLocation();
@@ -44,7 +44,7 @@ function Header(props) {
         </p>
       </div>
 
-      {props.isRenderAttention && <Attention />}
+      {/* {props.isRenderAttention && <Attention />} */}
 
       {/* <div className={`header__nav header__nav${props.offNavigation}`}>
         <Navigation
