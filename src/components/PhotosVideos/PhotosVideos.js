@@ -1,8 +1,5 @@
 import React from 'react';
 import gallery from '../../utils/gallery';
-import ubiley20 from '../../images/ubiley20.mp4';
-import ubiley25 from '../../images/ubiley25.mp4';
-import ubiley30 from '../../images/ubiley30.mp4';
 
 function PhotosVideos(props) {
   const galleryArrPhotoVideos = gallery();
@@ -32,76 +29,63 @@ function PhotosVideos(props) {
           <h4 className='photosVideos__pointHeading'>
             20 Службе спасения Северодвинска
           </h4>
-          <video
+          {/* <video
             className='photosVideos__pointVideo'
             src={ubiley20}
             controls
-          ></video>
-          <a
+          ></video> */}
+          <iframe
+            className='photosVideos__pointVideo'
+            title='Юбилей 20'
+            width='240'
+            height='max-content'
+            src='https://vkvideo.ru/video_ext.php?oid=-230139159&id=456239021&hd=2&autoplay=1'
+            allow='clipboard-write'
+            webkitAllowFullScreen
+            mozallowfullscreen
+            allowFullScreen
+          ></iframe>
+          {/* <a
             className='photosVideos__pointLink'
             href='https://www.youtube.com/watch?v=3OItisEhEKI'
             target='_blank'
             rel='noreferrer'
           >
             Ссылка на youtube
-          </a>
+          </a> */}
         </li>
         <li className='photosVideos__point'>
           <h4 className='photosVideos__pointHeading'>
             25 Службе спасения Северодвинска
           </h4>
-          <video
+          <iframe
             className='photosVideos__pointVideo'
-            src={ubiley25}
-            controls
-            preload='auto'
-          ></video>
-          <a
-            className='photosVideos__pointLink'
-            href='https://www.youtube.com/watch?v=bEmd26gU_9Q'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Ссылка на youtube
-          </a>
+            title='Юбилей 25'
+            width='240'
+            height='max-content'
+            src='https://vkvideo.ru/video_ext.php?oid=-230139159&id=456239022&hd=2&autoplay=1'
+            allow='clipboard-write'
+            webkitAllowFullScreen
+            mozallowfullscreen
+            allowFullScreen
+          ></iframe>
         </li>
         <li className='photosVideos__point'>
           <h4 className='photosVideos__pointHeading'>
             30 Службе спасения Северодвинска
           </h4>
-          <video
+          <iframe
             className='photosVideos__pointVideo'
-            src={ubiley30}
-            controls
-          ></video>
-          <a
-            className='photosVideos__pointLink'
-            href='https://www.youtube.com/watch?v=QRJq6As4krM'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Ссылка на youtube
-          </a>
+            title='Юбилей 30'
+            width='240'
+            height='max-content'
+            src='https://vkvideo.ru/video_ext.php?oid=-230139159&id=456239023&hd=2&autoplay=1'
+            allow='clipboard-write'
+            webkitAllowFullScreen
+            mozallowfullscreen
+            allowFullScreen
+          ></iframe>
         </li>
-        {/* <li className="photosVideos__point">
-          <h4 className="photosVideos__pointHeading">25 лет Службе спасения Северодвинска</h4>
-          <iframe className='photosVideos__pointVideo'
-            src="https://www.youtube.com/embed/bEmd26gU_9Q"
-            title="25 лет Службе спасения Северодвинска"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-          >
-          </iframe>
-
-        </li>
-        <li className="photosVideos__point">
-          <h4 className="photosVideos__pointHeading">30 лет Службе спасения Северодвинска</h4>
-          <iframe className='photosVideos__pointVideo'
-            src="https://www.youtube.com/embed/QRJq6As4krM"
-            title="30 лет Службе спасения Северодвинска"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-          >
-          </iframe>
-        </li> */}
       </ul>
       <h3 className='photosVideos__heading'>Фото</h3>
       <ul className='photosVideos__listPhoto'>
