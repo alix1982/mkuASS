@@ -285,6 +285,15 @@ function Navigation(props) {
         </li>
         <li className='navigation__point'>
           <NavLink
+            to='/distanceLearning'
+            className={activeClassPoint}
+            onClick={closeNavigate}
+          >
+            Дистанционное обучение
+          </NavLink>
+        </li>
+        <li className='navigation__point'>
+          <NavLink
             to='/news'
             className={activeClassPoint}
             onClick={closeNavigate}

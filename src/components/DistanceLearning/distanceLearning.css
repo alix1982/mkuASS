@@ -1,0 +1,81 @@
+.distanceLearning__text {
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 0.8;
+}
+.distanceLearning__link {
+  text-decoration: none;
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #024896;
+  transition: opacity 0.5s linear;
+}
+.distanceLearning__link:hover {
+  opacity: 0.7;
+}  
+
+
+
+/* .news__list {
+  list-style-type: none;
+  padding: 0;
+}
+.news__point {
+  padding-bottom: 20px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ededed;
+  overflow: hidden;
+}
+.news__pointHeading {
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.news__pointDate {
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+.news__pointText {
+  font-family: Inter, Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 0.8;
+}
+.news__pointImg {
+  padding: 5px;
+  width: calc((100vw - 160px) / 4);
+  height: calc((100vw - 100px) / 4);
+  object-fit: cover;
+}
+.news__pointImgOnePhoto {
+  width: 40%;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.news__pointList {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .news__pointImgOnePhoto {
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .news__pointText {
+    margin: 10px auto;
+  }
+} */

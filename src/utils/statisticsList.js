@@ -199,6 +199,12 @@ const statistic = [
     rescued: 164,
     id: 33,
   },
+  {
+    year: '2024',
+    trip: 1771,
+    rescued: 169,
+    id: 34,
+  },
 ];
 
 export default statistic;

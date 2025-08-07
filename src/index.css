@@ -53,6 +53,7 @@ body {
 @import url(components/InformationEducation/FinancialActivity/financialActivity.css);
 @import url(components/InformationEducation/VacantPlaces/vacantPlaces.css);
 
+@import url(components/DistanceLearning/distanceLearning.css);
 @import url(components/News/news.css);
 @import url(components/UsefulInformation/usefulInformation.css);
 @import url(components/PhotosVideos/photosVideos.css);

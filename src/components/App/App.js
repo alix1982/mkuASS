@@ -58,6 +58,7 @@ import {
   CurrentUserContext,
   // currentUserContext,
 } from '../../contexts/CurrentUserContext.js';
+import DistanceLearning from '../DistanceLearning/DistanceLearning.js';
 
 function App() {
   const [
@@ -779,6 +780,27 @@ function App() {
           }
         />
         {/* конец InformationEducation */}
+
+         <Route
+          path='/distanceLearning'
+          element={
+            <>
+              <Header
+                openVisuallyImpairedPopup={openVisuallyImpairedPopup}
+                isVisuallyImpairedPopup={isVisuallyImpairedPopup}
+                isRenderAttention={isRenderAttention}
+              />
+              <Navigation
+                isOpenNavigate={isOpenNavigate}
+                setIsOpenNavigate={setIsOpenNavigate}
+                onCloseOverlay={(evt) => onCloseOverlay(evt)}
+              />
+              <HeaderMain headingText='Дистанционное обучение' />
+              <DistanceLearning renderingDocument={renderingDocument} />
+              <Footer />
+            </>
+          }
+        />
 
         <Route
           path='/news'
